@@ -1,0 +1,8 @@
+
+    Directory: E:\clones\games.com
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  2:33 PM           1103 LICENSE
+-a---           10/7/2024  2:35 PM              0 structure.txt
+
