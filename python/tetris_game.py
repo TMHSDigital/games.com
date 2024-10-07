@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 # Initialize Pygame
 pygame.init()
@@ -50,9 +51,22 @@ class Tetris:
         self.fall_speed = 0.5
         self.font = pygame.font.Font(None, 36)
         
-        # Load sound effects
-        self.rotate_sound = pygame.mixer.Sound("rotate.wav")
-        self.clear_sound = pygame.mixer.Sound("clear.wav")
+        # Initialize sound (if available)
+        self.rotate_sound = None
+        self.clear_sound = None
+        self.init_sound()
+
+    def init_sound(self):
+        if pygame.mixer.get_init():
+            try:
+                self.rotate_sound = pygame.mixer.Sound(os.path.join("sounds", "rotate.wav"))
+                self.clear_sound = pygame.mixer.Sound(os.path.join("sounds", "clear.wav"))
+            except pygame.error:
+                print("Warning: Sound files not found. Game will run without sound.")
+
+    def play_sound(self, sound):
+        if sound:
+            sound.play()
 
     def new_piece(self):
         shape = random.choice(SHAPES)
@@ -91,7 +105,7 @@ class Tetris:
                 self.grid.insert(0, [0 for _ in range(GRID_WIDTH)])
                 lines_cleared += 1
         if lines_cleared:
-            self.clear_sound.play()
+            self.play_sound(self.clear_sound)
             self.score += (lines_cleared ** 2) * 100
             self.level = self.score // 1000 + 1
             self.fall_speed = max(0.1, 0.5 - (self.level - 1) * 0.05)
@@ -147,7 +161,7 @@ class Tetris:
                                    'x': self.current_piece['x'], 'y': self.current_piece['y']}
                         if self.valid_move(rotated, rotated['x'], rotated['y']):
                             self.current_piece = rotated
-                            self.rotate_sound.play()
+                            self.play_sound(self.rotate_sound)
 
             if self.fall_time / 1000 > self.fall_speed:
                 self.fall_time = 0
