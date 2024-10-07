@@ -3,6 +3,16 @@
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
+d----           10/7/2024  2:36 PM                python
+-a---           10/7/2024  2:36 PM              0 index.html
 -a---           10/7/2024  2:33 PM           1103 LICENSE
--a---           10/7/2024  2:35 PM              0 structure.txt
+-a---           10/7/2024  2:36 PM              0 script.js
+-a---           10/7/2024  2:38 PM            210 structure.txt
+-a---           10/7/2024  2:36 PM              0 style.css
+
+    Directory: E:\clones\games.com\python
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  2:38 PM           3692 snake_game.py
 
