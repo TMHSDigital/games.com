@@ -4,15 +4,19 @@
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 d----           10/7/2024  2:36 PM                python
--a---           10/7/2024  2:36 PM              0 index.html
+-a---           10/7/2024  2:48 PM           1151 index.html
 -a---           10/7/2024  2:33 PM           1103 LICENSE
--a---           10/7/2024  2:36 PM              0 script.js
--a---           10/7/2024  2:38 PM            210 structure.txt
--a---           10/7/2024  2:36 PM              0 style.css
+-a---           10/7/2024  2:48 PM           1807 script.js
+-a---           10/7/2024  2:58 PM           2082 server.py
+-a---           10/7/2024  3:01 PM            210 structure.txt
+-a---           10/7/2024  2:48 PM           1559 style.css
 
     Directory: E:\clones\games.com\python
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
+-a---           10/7/2024  2:57 PM           3258 pong_game.py
+-a---           10/7/2024  2:41 PM           3225 README.md
 -a---           10/7/2024  2:38 PM           3692 snake_game.py
+-a---           10/7/2024  2:56 PM           6724 tetris_game.py
 
