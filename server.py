@@ -30,8 +30,11 @@ def start_game(game):
         except Exception as e:
             return jsonify({"message": f"Error starting Tetris game: {str(e)}", "status": "error"}), 500
     elif game == 'pong':
-        # Placeholder for Pong game
-        return jsonify({"message": "Pong game not implemented yet", "status": "not_implemented"}), 501
+        try:
+            subprocess.Popen(['python', 'python/pong_game.py'])
+            return jsonify({"message": "Pong game started!", "status": "success"}), 200
+        except Exception as e:
+            return jsonify({"message": f"Error starting Pong game: {str(e)}", "status": "error"}), 500
     else:
         return jsonify({"message": "Unknown game", "status": "error"}), 400
 
