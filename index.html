@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <title>Awesome Game Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Snake Game!</h1>
-    <div id="game-container">
-        <button id="start-game">Start Game</button>
-    </div>
+    <header>
+        <h1>Awesome Game Hub</h1>
+    </header>
+    <nav>
+        <ul id="game-menu">
+            <li><button class="game-button" data-game="snake">Snake</button></li>
+            <li><button class="game-button" data-game="tetris">Tetris</button></li>
+            <li><button class="game-button" data-game="pong">Pong</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="game-info">
+            <h2 id="selected-game-title">Select a Game</h2>
+            <p id="game-description">Choose a game from the menu above to start playing!</p>
+        </section>
+        <section id="game-container">
+            <button id="start-game" style="display: none;">Start Game</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Awesome Game Hub. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
